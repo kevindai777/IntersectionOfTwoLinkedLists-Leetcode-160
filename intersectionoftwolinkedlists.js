@@ -51,8 +51,6 @@ while (curr) {
     curr = curr.next
 }
 
-console.log(set)
-
 let curr2 = headB 
 while (curr2) {
     if (set.has(curr2)) {
