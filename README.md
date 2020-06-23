@@ -3,6 +3,6 @@
 Leetcode Question 160 (Easy)
 
 Techniques Used in Question:
-Linked-Lists, Hashset
+Linked-List, Hashset
 
 [Link to Question](https://leetcode.com/problems/intersection-of-two-linked-lists/)
