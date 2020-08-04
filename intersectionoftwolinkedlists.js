@@ -58,3 +58,42 @@ while (curr2) {
     }
     curr2 = curr2.next
 }
+
+
+//O(n + m) solution that uses O(1) space by moving the longer list forward first
+//before traversing
+
+let lengthA = length(headA)
+let lengthB = length(headB)
+
+if (lengthA > lengthB) {
+    headA = moveForward(lengthA - lengthB, headA)
+} else {
+    headB = moveForward(lengthB - lengthA, headB)
+}
+
+while (headA && headB && headA != headB) {
+    headA = headA.next 
+    headB = headB.next
+}
+
+return headA
+
+function length(curr) {
+    let count = 0
+    while (curr) {
+        count++
+        curr = curr.next
+    }
+
+    return count
+}
+
+function moveForward(length, head) {
+    while (length > 0) {
+        head = head.next
+        length--
+    }
+
+    return head
+}
